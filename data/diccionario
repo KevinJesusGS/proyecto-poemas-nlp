@@ -1,0 +1,18 @@
+import csv
+
+# Nombre del archivo de entrada y salida
+archivo_txt = "es.txt"
+archivo_csv = "diccionario_palabras.csv"
+
+# Leer las palabras del archivo .txt
+with open(archivo_txt, "r", encoding="utf-8") as f:
+    palabras = [line.strip() for line in f if line.strip()]
+
+# Escribir en archivo CSV
+with open(archivo_csv, "w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    writer.writerow(["palabras"])  # encabezado
+    for palabra in palabras:
+        writer.writerow([palabra])
+
+print("Archivo CSV creado exitosamente:", archivo_csv)

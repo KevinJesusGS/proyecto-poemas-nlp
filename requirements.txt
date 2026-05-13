@@ -1,0 +1,32 @@
+# =========================
+# NLP Y CIENCIA DE DATOS
+# =========================
+numpy
+pandas
+matplotlib
+scikit-learn
+nltk
+wordcloud
+
+# =========================
+# BIG DATA
+# =========================
+pyspark
+
+# =========================
+# HUGGING FACE
+# =========================
+datasets
+transformers
+huggingface_hub
+
+# =========================
+# INTERFAZ GRÁFICA
+# =========================
+tk
+
+# =========================
+# UTILIDADES
+# =========================
+joblib
+tqdm
