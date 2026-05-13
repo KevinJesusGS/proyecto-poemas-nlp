@@ -73,29 +73,76 @@ El sistema guarda automáticamente:
 
 ---
 
+# Ejecución
+
+Instalar dependencias:
+
+```bash
+pip install -r requirements.txt
+```
+
+Ejecutar proyecto principal:
+
+```bash
+python run.py
+```
+
+Ejecutar análisis Big Data:
+
+```bash
+python ejemplo_bigdata.py
+```
+
+Ejecutar integración con HuggingFace:
+
+```bash
+python ejemplo_huggingface_bigdata.py
+```
+
 # Estructura del proyecto
 
-```text
+```bash
 proyecto-poemas-nlp/
 │
-├── data/
-│   ├── poemas.csv
-│   └── diccionario_palabras.csv
+├── data/                          # Datasets y diccionarios
 │
-├── results/
-│   ├── generados/
-│   ├── visualizaciones/
-│   ├── vocabulario/
-│   ├── embeddings/
-│   └── estadisticas/
+├── results/                       # Resultados generados
 │
 ├── src/
-│   ├── generacion/
-│   ├── analisis/
-│   ├── visualizacion/
-│   └── bigdata/
+│   │
+│   ├── analysis/                  # Análisis de estilo y vocabulario
+│   │   ├── analizar_estilo.py
+│   │   └── analizar_vocabulario.py
+│   │
+│   ├── bigdata/                   # Procesamiento Big Data con PySpark
+│   │   ├── analisis_huggingface.py
+│   │   ├── cargar_dataset_hf.py
+│   │   ├── spark_estadisticas.py
+│   │   ├── spark_preprocesamiento.py
+│   │   ├── spark_session.py
+│   │   ├── spark_similitud.py
+│   │   └── spark_vocabulario.py
+│   │
+│   ├── generation/                # Generación de poemas
+│   │   ├── generar_poemas.py
+│   │   ├── generar_poemas_por_topico.py
+│   │   └── generar_poemas_refuerzo.py
+│   │
+│   ├── procesamiento/             # Limpieza y procesamiento de texto
+│   │
+│   ├── utils/                     # Funciones auxiliares
+│   │   └── leer_csv.py
+│   │
+│   ├── visualization/             # Visualización y resultados
+│   │   └── resultados.py
+│   │
+│   ├── __init__.py
+│   └── main.py
 │
-├── main.py
-├── run.py
+├── ejemplo_bigdata.py             # Ejemplo de uso con PySpark
+├── ejemplo_huggingface_bigdata.py # Ejemplo con HuggingFace
+├── run.py                         # Ejecución principal del proyecto
 ├── requirements.txt
+├── .gitignore
 └── README.md
+```
